@@ -1,0 +1,8 @@
+{
+  "203.0.113.42": {
+    "verdict": "suspicious",
+    "source": "synthetic-lab-feed",
+    "description": "Fixture indicator for testing enrichment; not a real malicious IP.",
+    "observed_at": "2026-10-01"
+  }
+}

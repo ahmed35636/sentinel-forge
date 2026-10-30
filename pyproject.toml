@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentinel-forge"
+version = "0.1.0"
+description = "Evidence-led endpoint investigations over MCP"
+requires-python = ">=3.11"
+license = "MIT"
+readme = "README.md"
+dependencies = ["mcp==1.30.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1"]
+
+[project.scripts]
+sentinel-forge = "sentinel_forge.cli:main"
+sentinel-forge-server = "sentinel_forge.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
